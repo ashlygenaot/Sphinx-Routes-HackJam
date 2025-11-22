@@ -144,34 +144,7 @@ function liveValidation() {
 
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    if (!liveValidation()) return;
-
-
-    const user = {
-        name: name_input.value.trim(),
-        email: email_input.value.trim(),
-        username: username_input.value.trim(),
-        password: password_input.value,
-        ruler: ruler_input.value.trim(),
-        camel: camel_input.value.trim(),
-        introSong: intro_input.value.trim(),
-        weight: weight_input.value,
-        childAgree: child_input.value.trim(),
-        sound: sound_input.value.trim()
-    };
     
-    let users = JSON.parse(localStorage.getItem('users') || '[]');
-
-    if (users.some(u => u.username === user.username)) {
-        error_message.innerHTML = 'Username already exists. Choose another one.';
-        return;
-    }
-
-    users.push(user);
-    localStorage.setItem('users', JSON.stringify(users));
-
-    alert('Sign up successful! You can now log in.');
     signupForm.reset();
 
     window.location.href = 'index.html';

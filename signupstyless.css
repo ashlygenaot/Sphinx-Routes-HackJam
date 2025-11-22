@@ -1,0 +1,81 @@
+  .gradient-box {
+            width: 500px;
+            height: 600px;
+            background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
+        }
+
+        label {
+    display: block;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
+    font-family: sans-serif;
+    color: white;
+    padding: 20px;
+  }
+  
+  .color
+  {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color:#F3F3F3;
+  
+  }
+  
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .center {
+    text-align: center;
+  
+  }
+  
+  form {
+    width: 60vw;
+    max-width: 300px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+  }
+  
+  .margin {
+    padding-top: 20px;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3a97b5;
+    border-color: #3a97b5;
+    min-width: 300px;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  

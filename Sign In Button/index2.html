@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hold Weight Scale</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+  }
+
+  #heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #scaleContainer {
+    width: 500px;
+    height: 50px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    position: relative;
+    background-color: #eee;
+    margin-bottom: 20px;
+    transform-origin: center top;
+    transition: transform 0.1s;
+  }
+
+  #scaleFill {
+    height: 100%;
+    width: 0%;
+    background-color: orange;
+    border-radius: 10px;
+    transition: width 0.1s, background-color 0.1s;
+  }
+
+  #draggable {
+    width: 60px;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    cursor: grab;
+    transition: transform 0.1s;
+  }
+
+  #weightDisplay {
+    font-size: 24px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div id="heading">Please Weight</div>
+
+<div id="scaleContainer">
+  <div id="scaleFill"></div>
+  <img id="draggable" src="https://static.vecteezy.com/system/resources/previews/059/988/816/non_2x/green-rubber-ball-with-textured-surface-isolated-on-transparent-background-free-png.png" alt="Item">
+</div>
+
+<div id="weightDisplay">0</div>
+
+<script>
+const draggable = document.getElementById("draggable");
+const scaleContainer = document.getElementById("scaleContainer");
+const scaleFill = document.getElementById("scaleFill");
+const weightDisplay = document.getElementById("weightDisplay");
+
+let offsetX = 0, offsetY = 0;
+let isDragging = false;
+
+const MAX_TILT = 15;
+const MAX_ROTATE = 20; // max rotation of the draggable item
+const MAX_WEIGHT = 100;
+const REQUIRED_WEIGHT = 50;
+const HOLD_TIME = 2000; // 2 seconds hold to visit Google
+
+let holdTimer = null;
+
+draggable.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.offsetX;
+  offsetY = e.offsetY;
+  draggable.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  const rect = scaleContainer.getBoundingClientRect();
+  let x = e.clientX - rect.left - offsetX;
+  let y = Math.max(-draggable.offsetHeight, Math.min(0, e.clientY - rect.top - offsetY));
+
+  x = Math.max(-draggable.offsetWidth/2, Math.min(rect.width - draggable.offsetWidth/2, x));
+  draggable.style.left = x + "px";
+  draggable.style.top = y + "px";
+
+  // Calculate weight
+  let weight = Math.round((x + draggable.offsetWidth/2) / rect.width * MAX_WEIGHT);
+  weight = Math.max(0, weight);
+
+  // Update fill bar
+  scaleFill.style.width = (weight / MAX_WEIGHT * 100) + "%";
+
+  // Change color if weight equals REQUIRED_WEIGHT
+  if (weight === REQUIRED_WEIGHT) {
+    scaleFill.style.backgroundColor = "red";
+    if (!holdTimer) {
+      holdTimer = setTimeout(() => {
+        window.location.href = "login.html";
+      }, HOLD_TIME);
+    }
+  } else {
+    scaleFill.style.backgroundColor = "orange";
+    if (holdTimer) {
+      clearTimeout(holdTimer);
+      holdTimer = null;
+    }
+  }
+
+  // Tilt the scale container
+  const centerX = rect.width / 2;
+  const tiltAngle = ((x + draggable.offsetWidth/2) - centerX) / centerX * MAX_TILT;
+  scaleContainer.style.transform = `rotate(${tiltAngle}deg)`;
+
+  // Rotate the item left/right based on position
+  const itemRotate = ((x + draggable.offsetWidth/2) - centerX) / centerX * MAX_ROTATE;
+  draggable.style.transform = `rotate(${itemRotate}deg)`;
+
+  // Update weight display
+  weightDisplay.textContent = weight;
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  draggable.style.cursor = "grab";
+  if (holdTimer) {
+    clearTimeout(holdTimer);
+    holdTimer = null;
+  }
+});
+</script>
+
+</body>
+</html>

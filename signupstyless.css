@@ -1,122 +1,111 @@
+
 html {
     background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
-    font-family:   "Stack Sans Text", sans-serif;
-    color: ;
+    font-family: "Stack Sans Text", sans-serif;
+    color: beige;
     padding: 20px;
 }
 
-        label {
-    display: block;
-    color: black;
-  } 
-
-  
-  h1 {
+h1 {
     text-align: center;
     font-size: 40px;
-    font-family:  "Stack Sans Text", sans-serif;
-    color:#ddd9d9;
-  }
-  
-  .center {
-    text-align: center;
-  
-  }
-  
-  form {
+    color: #ddd9d9;
+    font-family: "Stack Sans Text", sans-serif;
+}
+
+a {
+    color: #690000;
+    text-decoration: none;
+}
+
+
+form {
     width: 60vw;
     max-width: 400px;
     min-width: 300px;
     margin: 0 auto;
     padding-bottom: 2em;
 }
-  
-  
-  fieldset {
+
+fieldset {
     border: none;
     padding: 2rem 0;
-  }
-  
-  .margin {
-    padding-top: 20px;
-  }
-  
-  input,
-  textarea,
-  select {
+}
+
+.color {
+    background-color: #f3f3f3;
+    opacity: 0.9;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    color: black;
+    margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
-  }
-  
-  input[type="submit"] {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
     display: block;
     width: 60%;
-    margin: 1em auto;
+    max-width: 300px;
     height: 2em;
     font-size: 1.1rem;
     background-color: #690000;
-    border-color: transparent;
-    min-width: 300px;
+    border: none;
     color: white;
     border-radius: 10px;
-  }
-  
-  .inline {
-    width: unset;
-    margin: 0 0.5em 0 0;
-    vertical-align: middle;
+    margin: 1em auto;
+    cursor: pointer;
+}
+
+
+.inline {
     display: inline-block;
-  }
-  
-  .color {
-    background-color: #f3f3f3;
-    opacity: 0.8;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 400px;
-    border-radius: 10px;
-  }
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#sound {
+    width: 200px;
+}
 
 
-  input{
-    border-radius: 10px;
-    border-color: transparent;
-  }
+.incorrect input {
+    border: 2px solid red;
+}
 
-  .center {
-    align: center;
-  }
+#error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
 
-  a {
-    color: #690000;
-  }
 
-    .inline { 
-      display: inline-block; 
-      vertical-align: middle;
-       margin-right: 10px; }
+button {
+    cursor: pointer;
+}
 
-    #sound { 
-      width: 200px; 
-    }
+.center {
+    text-align: center;
+}
 
-    .incorrect input { 
-      border: 2px solid red; 
-    }
-
-    #error-message { 
-      color: red; 
-      margin-bottom: 10px; 
-      font-weight: bold; 
-      padding-bottom: 20px ;
-    }
-
-    label { display: block; margin-bottom: 8px;
-     }
-    input { padding: 4px;
-     }
-    button { cursor: pointer;
-     }
+p {
+  color: black;
+}

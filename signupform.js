@@ -63,7 +63,7 @@ function liveValidation() {
         errors.push('Oldest ruler in Egypt is required');
         ruler_input.parentElement.classList.add('incorrect');
     } else if (rulerVal.toLowerCase() !== 'narmer') {
-        errors.push('Oldest ruler must be "Narmer"');
+        errors.push('Oldest ruler in Egypt is wrong');
         ruler_input.parentElement.classList.add('incorrect');
     } else {
         ruler_input.parentElement.classList.remove('incorrect');
@@ -147,7 +147,7 @@ signupForm.addEventListener('submit', (e) => {
 
     if (!liveValidation()) return;
 
-    // Save user in localStorage
+
     const user = {
         name: name_input.value.trim(),
         email: email_input.value.trim(),
@@ -160,17 +160,14 @@ signupForm.addEventListener('submit', (e) => {
         childAgree: child_input.value.trim(),
         sound: sound_input.value.trim()
     };
-
-    // Get existing users
+    
     let users = JSON.parse(localStorage.getItem('users') || '[]');
 
-    // Check if username exists
     if (users.some(u => u.username === user.username)) {
         error_message.innerHTML = 'Username already exists. Choose another one.';
         return;
     }
 
-    // Add new user
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
 

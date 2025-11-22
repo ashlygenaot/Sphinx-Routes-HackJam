@@ -1,5 +1,11 @@
 # Sphinx Routes
 
+<img width="1470" height="835" alt="Screenshot 2025-11-22 at 5 52 59 PM" src="https://github.com/user-attachments/assets/cbc5dc3a-3f09-44c5-a2a4-548fca15a4c4" />
+
+
+
+
+
 ## Introduction
 
 This project is a submission for HackJam 2025 at USF. We followed the UI/UX track and built a frustrating UI experience inspired by The Impossible Game and other bad UI designs.

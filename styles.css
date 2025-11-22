@@ -1,0 +1,121 @@
+
+    
+    
+    .front {
+            display:flex;
+            align-items: center;
+            gap:0px;
+            position: relative;
+     }
+
+    .camel{
+    width:600px;
+    }
+
+    .gradient-box {
+            width: 900px;
+            height: 790px;
+            background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
+     }
+     .white-box{
+       width:700px;
+       height:550px;
+       background-color:white;
+       position:absolute;
+       top:220px;
+       left:725px;
+       opacity: 60%;
+       border-radius: 10px;
+       z-index: 20;
+
+     }
+
+     .title{ 
+        position:absolute; 
+        left:820px;
+        font-size:70px;
+        font-weight:bolder;
+        top: 10px;
+        font-family:  "Stack Sans Text", sans-serif;
+        color:#F2D5B3
+
+     }
+     .heading{ 
+        position:absolute; 
+        left:855px;
+        font-size:30px;
+        top: 130px;
+        font-family:  "Stack Sans Text", sans-serif;
+        color:#c3c2c2}
+        .user
+        {
+              width:450px;
+              height: 50px;
+              font-size: 25px;
+              color: white;
+              z-index: 10;
+              opacity: 100%;
+              position: relative;
+              left: 200px;
+              top:350px;
+              border-radius:10px
+        }
+        .password {
+          width:450px;
+              height: 50px;
+              font-size: 25px;
+              color: white;
+              z-index: 10;
+              opacity: 100%;
+              position: absolute;
+              left: 800px;
+              top:500px;
+              border-radius:10px
+        }
+.noacc {
+       font-size: 30px;
+       font-family: "stack sans text", sans-serif;
+       top: 170px;
+       left: 200px;
+       position: relative;
+       z-index: 50
+}
+.signup {
+       font-size: 30px;
+       font-family: "stack sans text", sans-serif;
+       top: 100px;
+       left: 550px;
+       text-decoration: underline;
+       position: relative;
+       z-index: 50;
+       color:rgb(116, 11, 11)
+}
+.google{
+       position: relative;
+       height: 50px;
+       width:90px;
+       top: 450px;
+       left:210px;
+       z-index: 50;
+
+}
+.facebook{
+       position:relative;
+       height:60px;
+       width:60px;
+       top:455px;
+       z-index: 50;
+       left:400px;
+}
+.apple {
+       height:60px;
+       width:80px;
+       top:450px;
+       left:570px;
+       position: relative;
+       
+}
+
+
+
+   

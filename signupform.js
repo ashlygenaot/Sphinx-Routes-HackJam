@@ -24,16 +24,16 @@ playBttn.addEventListener('click', () => {
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const errors = liveValidation();
+    const errors = liveValidation(); // modify liveValidation to return array
 
     if (errors.length > 0) {
-        error_message.innerText = errors.join('. ');
-        highlightErrors();
+        error_message.innerHTML = errors.join('<br><br>');
         return;
     }
 
-    signupForm.submit();
+    alert('Sign up successful!');
 });
+
 
 
 function liveValidation() {
@@ -173,5 +173,7 @@ signupForm.addEventListener('submit', (e) => {
 
     alert('Sign up successful! You can now log in.');
     signupForm.reset();
+
+    window.location.href = 'index.html';
 });
 

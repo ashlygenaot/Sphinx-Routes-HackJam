@@ -1,34 +1,21 @@
-  .gradient-box {
-            width: 500px;
-            height: 600px;
-            background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
-        }
+html {
+    background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
+    font-family:   "Stack Sans Text", sans-serif;
+    color: ;
+    padding: 20px;
+}
 
         label {
     display: block;
-  }
-  
-  body {
-    background: linear-gradient(to bottom, rgb(115, 115, 172), beige);
-    font-family: sans-serif;
-    color: white;
-    padding: 20px;
-  }
-  
-  .color
-  {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 400px;
-    background-color:#F3F3F3;
-  
-  }
-  
+    color: black;
+  } 
+
   
   h1 {
     text-align: center;
+    font-size: 40px;
+    font-family:  "Stack Sans Text", sans-serif;
+    color:#ddd9d9;
   }
   
   .center {
@@ -38,11 +25,12 @@
   
   form {
     width: 60vw;
-    max-width: 300px;
+    max-width: 400px;
     min-width: 300px;
     margin: 0 auto;
     padding-bottom: 2em;
-  }
+}
+  
   
   fieldset {
     border: none;
@@ -67,15 +55,68 @@
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
-    background-color: #3a97b5;
-    border-color: #3a97b5;
+    background-color: #690000;
+    border-color: transparent;
     min-width: 300px;
+    color: white;
+    border-radius: 10px;
   }
   
   .inline {
     width: unset;
     margin: 0 0.5em 0 0;
     vertical-align: middle;
+    display: inline-block;
   }
   
-  
+  .color {
+    background-color: #f3f3f3;
+    opacity: 0.8;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+
+  input{
+    border-radius: 10px;
+    border-color: transparent;
+  }
+
+  .center {
+    align: center;
+  }
+
+  a {
+    color: #690000;
+  }
+
+    .inline { 
+      display: inline-block; 
+      vertical-align: middle;
+       margin-right: 10px; }
+
+    #sound { 
+      width: 200px; 
+    }
+
+    .incorrect input { 
+      border: 2px solid red; 
+    }
+
+    #error-message { 
+      color: red; 
+      margin-bottom: 10px; 
+      font-weight: bold; 
+      padding-bottom: 20px ;
+    }
+
+    label { display: block; margin-bottom: 8px;
+     }
+    input { padding: 4px;
+     }
+    button { cursor: pointer;
+     }

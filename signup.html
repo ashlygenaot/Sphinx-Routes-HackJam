@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SignUp</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="signupstyless.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+  <script src="loginform.js" defer></script>
 </head>
 <body>
 
-<h1 id="title">Sign up</h1>
-    <p class="center" id="description">Thanks for taking the time to answer this survey!</p>
-    <fieldset class="color">
-    <form>
-    <label id="name-label" for="name">Full Name: <input placeholder="Enter your full name" id="name" name="name" type="text" required /></label>
-    <label class="margin" id="email-label" for="email">Email: <input placeholder="Enter your email" id="email" name="email" type="email" required /></label>
-    <label class="margin"id="number-label" for="number">Age:<input placeholder="Age" min="13" max="120" id="number" name="number" type="number" required /></label>
-    <label id="username" for="username">Username: <input placeholder="Username" id="username" name="username" type="text" required /></label>
-    <label class="margin" id="password-label" for="password">Password: <input placeholder="Password" id="password" name="password" type="text" required /></label>
-    <label class="margin"id="weight" for="weight">Weight:<input placeholder="Weight in Oz" min="0" max="60000" id="number" name="weight" type="number" required /></label>
+<h1>Sign Up</h1>
 
-    <input id="submit" type="submit" value="Sign up">
+<form class="color" id="signup-form">
+
+  
+  <p id="error-message"></p>
+
+  <label for="name">Full Name:
+    <input placeholder="Enter your full name" id="name" type="text" required />
+  </label>
+
+  <label for="email">Email:
+    <input placeholder="Enter your email" id="email" type="email" required />
+  </label>
+
+  <label for="username">Username:
+    <input placeholder="Username" id="username" type="text" required />
+  </label>
+
+  <label for="password">Password:
+    <input placeholder="Password" id="password" type="text" required />
+  </label>
+
+  <label for="weight">Weight (Oz):
+    <input placeholder="Weight in Oz" id="weight" type="number" min="0" max="60000" required />
+  </label>
+
+  <label for="camelColor">Camel Rope Color:
+    <input placeholder="Purple" id="camelColor" type="text" required />
+  </label>
+
+  <label for="childAgree">Do you agree to signing away your first child?:
+    <input placeholder="Yes or No" id="childAgree" type="text" required />
+  </label>
+
+  <label for="ruler">Oldest ruler in Egypt:
+    <input placeholder="idk bro google it" id="ruler" type="text" required />
+  </label>
+
+  <label for="introSong">Intro song to your life:
+    <input placeholder="Song - Artist" id="introSong" type="text" required />
+  </label>
+
+  <button class="inline" id="play-button" type="button">
+    <span class="material-symbols-outlined">play_arrow</span>
+  </button>
+  <label class="inline" for="sound">Write what you just heard:
+    <input placeholder="sound" id="sound" type="text" required />
+  </label>
+
+  <br><br>
+  <input id="submit" type="submit" value="Sign Up">
+  <p class="center">Already have an account? <a href="login.html">Login</a></p>
 </form>
- </fieldset>
+
 </body>
 </html>

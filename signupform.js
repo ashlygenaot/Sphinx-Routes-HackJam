@@ -24,7 +24,7 @@ playBttn.addEventListener('click', () => {
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const errors = getAllErrors();
+    const errors = liveValidation();
 
     if (errors.length > 0) {
         error_message.innerText = errors.join('. ');
@@ -174,3 +174,4 @@ signupForm.addEventListener('submit', (e) => {
     alert('Sign up successful! You can now log in.');
     signupForm.reset();
 });
+
